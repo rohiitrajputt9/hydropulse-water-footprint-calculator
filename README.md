@@ -1,46 +1,46 @@
-# 🌊 HydroPulse — Water Footprint Calculator
+#  HydroPulse — Water Footprint Calculator
 
 HydroPulse is a modern full-stack sustainability analytics platform that helps users track, analyze, and optimize daily water consumption through intelligent insights, analytics dashboards, and AI-powered sustainability recommendations.
 
 ---
 
-## 🚀 Features
+##  Features
 
-### 🔐 Authentication System
+###  Authentication System
 - User Registration & Login
 - JWT Authentication
 - Protected Routes
 - Multi-user Support
 - Secure Password Hashing
 
-### 📊 Analytics Dashboard
+###  Analytics Dashboard
 - Real-time Water Usage Analytics
 - Weekly & Monthly Trends
 - Indoor vs Outdoor Usage Tracking
 - Sustainability Score System
 - Smart AI Recommendations
 
-### 💧 Water Logs Management
+###  Water Logs Management
 - Add Water Usage Logs
 - Edit/Delete Water Logs
 - User-specific Data Management
 - Smart Usage Categorization
 
-### 📈 Reports System
+###  Reports System
 - CSV Export
 - PDF Report Export
 - AI Sustainability Summary
 - Report History Tracking
 - Cloud Sync Architecture
 
-### ⚙️ Settings & Profile
+###  Settings & Profile
 - Update Profile Information
 - Daily Goal Management
 - User Preferences
 - Sustainability Targets
 - Connected Services UI
 
-### 🎨 Modern UI/UX
+### Modern UI/UX
 - Glassmorphism Design
 - Fully Responsive Layout
 - Interactive Charts
@@ -49,7 +49,7 @@ HydroPulse is a modern full-stack sustainability analytics platform that helps u
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - React.js
