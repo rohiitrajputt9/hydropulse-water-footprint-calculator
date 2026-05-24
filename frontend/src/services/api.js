@@ -2,8 +2,7 @@ import axios from "axios";
 
 const api = axios.create({
 
-    baseURL: "http://13.206.255.76:5000/api",
-
+    baseURL: "https://hydropulse-water-footprint-calculator-production.up.railway.app/api",
     headers: {
 
         "Content-Type": "application/json"
