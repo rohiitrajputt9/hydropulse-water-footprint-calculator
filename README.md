@@ -72,7 +72,7 @@ HydroPulse is a modern full-stack sustainability analytics platform that helps u
 - MySQL
 
 ### Deployment
-- AWS EC2 (Backend)
+- Railway (Backend)
 - Railway MySQL
 - Vercel (Frontend)
 
