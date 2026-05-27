@@ -108,7 +108,7 @@ router.post("/register", async (req, res) => {
                             id: result.insertId
                         },
 
-                        "hydropulse_secret_key",
+                        process.env.JWT_SECRET,
 
                         {
 
@@ -215,7 +215,7 @@ router.post("/login", (req, res) => {
                 id: user.id
             },
 
-            "hydropulse_secret_key",
+            process.env.JWT_SECRET,
 
             {
 

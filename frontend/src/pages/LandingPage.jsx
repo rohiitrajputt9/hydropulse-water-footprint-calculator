@@ -33,28 +33,41 @@ function LandingPage() {
 
                     </h1>
 
-                  <nav className="flex items-center gap-8 text-white font-medium">
+                    <nav className="flex items-center gap-8 text-white font-medium">
 
-                        <a href="/Register" className="hover:text-cyan-400 transition">
+                        <button className="hover:text-cyan-400 transition">
                             Features
-                        </a>
+                        </button>
 
-                        <a href="/analytics" className="hover:text-cyan-400 transition">
+                        <button className="hover:text-cyan-400 transition">
                             Analytics
-                        </a>
+                        </button>
 
-                        <a href="/contact" className="hover:text-cyan-400 transition">
+                        <button className="hover:text-cyan-400 transition">
                             Contact
-                        </a>
-                        
-                    
+                        </button>
+
+                        <Link
+                            to="/login"
+                            className="hover:text-cyan-400 transition"
+                        >
+                            Login
+                        </Link>
+
+                        <Link
+                            to="/register"
+                            className="px-5 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 transition font-semibold text-black"
+                        >
+                            Register
+                        </Link>
+
                     </nav>
 
-                    <Link to="/dashboard" className="px-5 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 transition font-semibold text-black">
+                        <Link to="/login" className="px-5 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 transition font-semibold text-black">
 
                         Launch Dashboard
 
-                    </Link>
+                        </Link>
 
                 </div>
 
@@ -229,7 +242,7 @@ function LandingPage() {
 
                 </motion.div>
 
-           </section>
+            </section>
 
 
 <StatsSection />
@@ -268,7 +281,7 @@ function LandingPage() {
     </div>
 
 </section>
-    <Footer />   
+    <Footer />
 
 </div>
     );

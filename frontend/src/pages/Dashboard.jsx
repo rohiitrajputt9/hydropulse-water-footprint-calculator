@@ -41,21 +41,26 @@ function Dashboard() {
 
     }, []);
 
-    if (!analytics) {
+            if (!analytics) {
 
-        return (
+            return (
 
-            <div className="min-h-screen bg-[#020617] flex items-center justify-center">
+                <div className="min-h-screen bg-[#020617] flex flex-col items-center justify-center gap-6">
 
-                <h1 className="text-4xl font-black text-white">
+                    <h1 className="text-4xl font-black text-white">
 
-                    Loading Analytics...
+                        Loading Analytics...
 
-                </h1>
+                    </h1>
 
-            </div>
-        );
-    }
+                    <p className="text-gray-400">
+
+                        Please wait while data loads
+                    </p>
+
+                </div>
+            );
+        }
 
     return (
 
