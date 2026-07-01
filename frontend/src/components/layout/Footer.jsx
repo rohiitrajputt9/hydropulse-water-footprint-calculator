@@ -79,6 +79,14 @@ function Footer() {
                             >
                                 <FaLinkedin />
                             </a>
+
+                            {/* Email */}
+                            <a
+                                href="mailto:rajputrohit9977@gmail.com"
+                                className="w-12 h-12 rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center text-gray-500 dark:text-gray-300 hover:text-cyan-500 hover:border-cyan-500/40 dark:hover:text-cyan-400 dark:hover:border-cyan-400/40 transition duration-300 text-xl"
+                            >
+                                <FaEnvelope />
+                            </a>
                         </div>
                     </div>
                 </div>
