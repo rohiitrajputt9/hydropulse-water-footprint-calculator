@@ -4,11 +4,11 @@ function StatsSection() {
 
     const stats = [
         {
-            value: 25000,
+            value: 1000,
             label: "Liters Tracked"
         },
         {
-            value: 1200,
+            value: 100,
             label: "Active Users"
         },
         {

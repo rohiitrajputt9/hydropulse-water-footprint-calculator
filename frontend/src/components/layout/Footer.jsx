@@ -62,7 +62,7 @@ function Footer() {
                         <div className="flex items-center gap-4">
                             {/* GitHub */}
                             <a
-                                href="https://github.com/"
+                                href="https://github.com/rohiitrajputt9"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="w-12 h-12 rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center text-gray-500 dark:text-gray-300 hover:text-cyan-500 hover:border-cyan-500/40 dark:hover:text-cyan-400 dark:hover:border-cyan-400/40 transition duration-300 text-xl"
@@ -79,14 +79,6 @@ function Footer() {
                             >
                                 <FaLinkedin />
                             </a>
-
-                            {/* Email */}
-                            <a
-                                href="mailto:example@gmail.com"
-                                className="w-12 h-12 rounded-xl bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center text-gray-500 dark:text-gray-300 hover:text-cyan-500 hover:border-cyan-500/40 dark:hover:text-cyan-400 dark:hover:border-cyan-400/40 transition duration-300 text-xl"
-                            >
-                                <FaEnvelope />
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -94,7 +86,7 @@ function Footer() {
                 {/* Bottom Footer */}
                 <div className="mt-12 pt-6 border-t border-slate-200 dark:border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs md:text-sm text-gray-400">
                     <p className="text-center md:text-left">
-                        © 2026 HydroPulse. All rights reserved.
+                        © 2026 HydroPulse. Developed by Rohit Rajput. All rights reserved.
                     </p>
                     <p className="text-center md:text-right">
                         Built with React, Tailwind CSS, Node.js & PostgreSQL
