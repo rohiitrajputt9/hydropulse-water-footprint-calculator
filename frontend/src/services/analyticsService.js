@@ -122,3 +122,22 @@ export const getAIPrediction = async () => {
         throw error;
     }
 };
+
+
+// NOTIFY CSV EXPORT
+
+export const notifyCSVExport = async () => {
+
+    try {
+
+        const response = await api.post("/analytics/notify-csv");
+
+        return response.data;
+
+    } catch (error) {
+
+        console.error("CSV Notify Error:", error);
+
+        throw error;
+    }
+};

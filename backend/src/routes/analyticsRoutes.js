@@ -6,6 +6,8 @@ const db = require("../config/db");
 
 const authMiddleware = require("../middleware/authMiddleware");
 
+const { sendCSVNotificationEmail } = require("../services/emailService");
+
 
 // MAIN ANALYTICS
 
@@ -312,6 +314,64 @@ router.get(
 
                 recommendation
             });
+        });
+    }
+);
+
+
+// CSV DOWNLOAD NOTIFICATION EMAIL
+
+router.post(
+
+    "/notify-csv",
+
+    authMiddleware,
+
+    (req, res) => {
+
+        const userId = req.user.id;
+
+        const sql = `
+            SELECT full_name, email FROM users
+            WHERE id = ?
+        `;
+
+        db.query(sql, [userId], (err, result) => {
+
+            if (err) {
+
+                console.error(err);
+
+                return res.status(500).json({
+
+                    message: "Database query failed during CSV notification"
+                });
+            }
+
+            if (result.length === 0) {
+
+                return res.status(404).json({
+
+                    message: "User not found"
+                });
+            }
+
+            const user = result[0];
+
+            // Send notification email asynchronously
+            sendCSVNotificationEmail(user.email, user.full_name)
+                .then(() => {
+                    res.status(200).json({
+                        message: "CSV download email sent successfully"
+                    });
+                })
+                .catch((emailErr) => {
+                    console.error("Failed to send CSV download email:", emailErr);
+                    // Still return 200 so the user download experience doesn't break if mail servers are slow
+                    res.status(200).json({
+                        message: "CSV downloaded (email sending failed)"
+                    });
+                });
         });
     }
 );

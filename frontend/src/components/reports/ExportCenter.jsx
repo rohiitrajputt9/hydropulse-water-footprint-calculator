@@ -10,7 +10,8 @@ import jsPDF from "jspdf";
 
 import {
 
-    getAnalytics
+    getAnalytics,
+    notifyCSVExport
 
 } from "../../services/analyticsService";
 
@@ -84,6 +85,11 @@ function ExportCenter() {
 
                 "CSV Report Exported Successfully"
             );
+
+            // Notify backend to dispatch confirmation email
+            notifyCSVExport().catch((emailErr) => {
+                console.error("Failed to trigger CSV export notification email:", emailErr);
+            });
 
         } catch (error) {
 

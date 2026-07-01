@@ -8,6 +8,8 @@ const jwt = require("jsonwebtoken");
 
 const db = require("../config/db");
 
+const { sendWelcomeEmail } = require("../services/emailService");
+
 
 // REGISTER
 
@@ -132,6 +134,11 @@ router.post("/register", async (req, res) => {
 
                             daily_goal_liters
                         }
+                    });
+
+                    // Send welcome email asynchronously
+                    sendWelcomeEmail(email, full_name).catch((emailErr) => {
+                        console.error("Failed to send welcome email:", emailErr);
                     });
                 }
             );
