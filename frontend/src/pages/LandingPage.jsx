@@ -22,55 +22,39 @@ function LandingPage() {
             </div>
 
             {/* Navbar */}
-
-            <header className="relative z-10">
-
-                <div className="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
-
-                    <h1 className="text-3xl font-bold tracking-wide text-cyan-400">
-
+            <header className="relative z-15 border-b border-white/5 bg-[#020617]/50 backdrop-blur-md sticky top-0">
+                <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+                    <Link to="/" className="text-3xl font-black tracking-wide text-cyan-400">
                         HydroPulse
+                    </Link>
 
-                    </h1>
-
-                    <nav className="flex items-center gap-8 text-white font-medium">
-
-                        <button className="hover:text-cyan-400 transition">
+                    <nav className="hidden md:flex items-center gap-8 text-gray-300 font-semibold text-sm">
+                        <a href="#features" className="hover:text-cyan-400 transition">
                             Features
-                        </button>
-
-                        <button className="hover:text-cyan-400 transition">
+                        </a>
+                        <a href="#analytics" className="hover:text-cyan-400 transition">
                             Analytics
-                        </button>
-
-                        <button className="hover:text-cyan-400 transition">
+                        </a>
+                        <a href="#contact" className="hover:text-cyan-400 transition">
                             Contact
-                        </button>
+                        </a>
+                    </nav>
 
+                    <div className="flex items-center gap-4">
                         <Link
                             to="/login"
-                            className="hover:text-cyan-400 transition"
+                            className="px-5 py-2.5 rounded-xl border border-white/10 hover:border-cyan-400/50 text-white font-semibold text-sm transition"
                         >
                             Login
                         </Link>
-
                         <Link
                             to="/register"
-                            className="px-5 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 transition font-semibold text-black"
+                            className="px-5 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-bold text-sm transition shadow-lg shadow-cyan-500/10"
                         >
-                            Register
+                            Get Started
                         </Link>
-
-                    </nav>
-
-                        <Link to="/login" className="px-5 py-3 rounded-xl bg-cyan-500 hover:bg-cyan-400 transition font-semibold text-black">
-
-                        Launch Dashboard
-
-                        </Link>
-
+                    </div>
                 </div>
-
             </header>
 
             {/* Hero Section */}
@@ -251,9 +235,9 @@ function LandingPage() {
             </section>
 
 
-<StatsSection />
-<FeaturesSection />
-<AnalyticsPreview />
+<div id="stats"><StatsSection /></div>
+<div id="features"><FeaturesSection /></div>
+<div id="analytics"><AnalyticsPreview /></div>
 
 <section
     id="contact"

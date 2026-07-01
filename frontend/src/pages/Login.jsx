@@ -12,6 +12,8 @@ import {
 
 } from "react-router-dom";
 
+import { ArrowLeft } from "lucide-react";
+
 import toast from "react-hot-toast";
 
 import {
@@ -93,7 +95,16 @@ function Login() {
 
     return (
 
-        <div className="min-h-screen bg-[#020617] relative overflow-hidden flex items-center justify-center px-4">
+        <div className="min-h-screen bg-slate-900 dark:bg-[#020617] relative overflow-hidden flex items-center justify-center px-4 transition-colors duration-300">
+
+            {/* Back to Home Button */}
+            <Link 
+                to="/" 
+                className="absolute top-6 left-6 z-20 flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/5 border border-white/10 text-gray-300 hover:text-cyan-400 hover:border-cyan-400/40 transition duration-300 backdrop-blur-md text-sm font-semibold cursor-pointer"
+            >
+                <ArrowLeft size={16} />
+                Back to Home
+            </Link>
 
             {/* BACKGROUND EFFECTS */}
 
