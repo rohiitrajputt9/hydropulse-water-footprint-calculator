@@ -18,8 +18,6 @@ function ExportCenter() {
 
     const [loading, setLoading] = useState(false);
 
-    const [sheetUrl, setSheetUrl] = useState("");
-
     // CSV EXPORT
 
     const exportCSV = async () => {
@@ -295,35 +293,17 @@ function ExportCenter() {
         }
     };
 
-    // GOOGLE SHEETS
-
-    const syncGoogleSheets = () => {
-
-        if (!sheetUrl) {
-
-            return toast.error(
-
-                "Please enter Google Sheet URL"
-            );
-        }
-
-        toast.success(
-
-            "Google Sheets Sync Connected"
-        );
-    };
-
     return (
 
-        <div className="mt-10 grid lg:grid-cols-2 gap-10">
+        <div className="mt-10 max-w-2xl mx-auto">
 
             {/* EXPORT CENTER */}
 
-            <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-[32px] p-10">
+            <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-[32px] p-10 shadow-2xl">
 
                 <div className="flex items-center gap-5">
 
-                    <div className="w-20 h-20 rounded-3xl bg-red-500/20 flex items-center justify-center text-4xl">
+                    <div className="w-20 h-20 rounded-3xl bg-cyan-500/20 flex items-center justify-center text-4xl">
 
                         📄
 
@@ -349,7 +329,7 @@ function ExportCenter() {
 
                 {/* BUTTONS */}
 
-                <div className="mt-10 space-y-5">
+                <div className="mt-10 grid md:grid-cols-2 gap-5">
 
                     <button
 
@@ -357,7 +337,7 @@ function ExportCenter() {
 
                         disabled={loading}
 
-                        className="w-full py-5 rounded-2xl bg-cyan-500 hover:bg-cyan-400 transition text-black font-bold text-lg"
+                        className="w-full py-5 rounded-2xl bg-cyan-500 hover:bg-cyan-400 transition text-black font-bold text-lg cursor-pointer"
 
                     >
 
@@ -371,70 +351,11 @@ function ExportCenter() {
 
                         disabled={loading}
 
-                        className="w-full py-5 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-400 transition text-white font-bold text-lg"
+                        className="w-full py-5 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-400 transition text-white font-bold text-lg cursor-pointer"
 
                     >
 
                         Export PDF Summary
-
-                    </button>
-
-                </div>
-
-            </div>
-
-            {/* GOOGLE SHEETS */}
-
-            <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-[32px] p-10">
-
-                <div className="flex items-center gap-5">
-
-                    <div className="w-20 h-20 rounded-3xl bg-green-500/20 flex items-center justify-center text-4xl">
-
-                        📊
-
-                    </div>
-
-                    <div>
-
-                        <h2 className="text-4xl font-black text-white">
-
-                            Google Sheets Sync
-
-                        </h2>
-
-                        <p className="mt-2 text-gray-400">
-
-                            Synchronize analytics with cloud spreadsheets
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div className="mt-10">
-
-                    <input
-                        type="text"
-                        value={sheetUrl}
-                        onChange={(e) => {
-
-                            setSheetUrl(e.target.value);
-                        }}
-                        placeholder="Enter Google Sheet URL"
-                        className="w-full bg-[#0F172A] border border-white/10 rounded-2xl px-5 py-5 text-white outline-none focus:border-cyan-400"
-                    />
-
-                    <button
-
-                        onClick={syncGoogleSheets}
-
-                        className="mt-6 w-full py-5 rounded-2xl bg-cyan-500 hover:bg-cyan-400 transition text-black font-bold text-lg"
-
-                    >
-
-                        Sync Analytics Data
 
                     </button>
 

@@ -4,8 +4,6 @@ import ReportsStats from "../components/reports/ReportsStats";
 
 import ExportCenter from "../components/reports/ExportCenter";
 
-import ReportsHistory from "../components/reports/ReportsHistory";
-
 import AISummary from "../components/reports/AISummary";
 
 function Reports() {
@@ -35,8 +33,6 @@ function Reports() {
                 <ReportsStats />
 
                 <ExportCenter />
-
-                <ReportsHistory />
 
                 <AISummary />
 

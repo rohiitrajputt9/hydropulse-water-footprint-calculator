@@ -2,11 +2,7 @@ import DashboardLayout from "../layouts/DashboardLayout";
 
 import ProfileSettings from "../components/settings/ProfileSettings";
 
-import Preferences from "../components/settings/Preferences";
-
 import GoalsSettings from "../components/settings/GoalsSettings";
-
-import ConnectedServices from "../components/settings/ConnectedServices";
 
 function Settings() {
 
@@ -34,11 +30,7 @@ function Settings() {
 
                 <ProfileSettings />
 
-                <Preferences />
-
                 <GoalsSettings />
-
-                <ConnectedServices />
 
             </div>
 
