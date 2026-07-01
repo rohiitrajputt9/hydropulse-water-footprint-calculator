@@ -115,17 +115,23 @@ function LandingPage() {
 
                     <div className="mt-10 flex flex-wrap gap-6">
 
-                        <button className="px-8 py-4 rounded-2xl bg-cyan-500 hover:bg-cyan-400 text-black font-bold text-lg transition">
+                        <Link
+                            to="/register"
+                            className="px-8 py-4 rounded-2xl bg-cyan-500 hover:bg-cyan-400 text-black font-bold text-lg transition text-center"
+                        >
 
                             Start Tracking
 
-                        </button>
+                        </Link>
 
-                        <button className="px-8 py-4 rounded-2xl border border-gray-700 hover:border-cyan-400 text-white font-bold text-lg transition">
+                        <Link
+                            to="/login"
+                            className="px-8 py-4 rounded-2xl border border-gray-700 hover:border-cyan-400 text-white font-bold text-lg transition text-center"
+                        >
 
                             View Analytics
 
-                        </button>
+                        </Link>
 
                     </div>
 

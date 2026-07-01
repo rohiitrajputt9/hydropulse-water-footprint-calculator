@@ -23,10 +23,10 @@ const getWeeklyAverage = (req, res) => {
 
     const sql = `
         SELECT
-            WEEK(log_date) AS week_number,
+            EXTRACT(WEEK FROM log_date) AS week_number,
             AVG(total_usage) AS weekly_average
         FROM water_logs
-        GROUP BY WEEK(log_date)
+        GROUP BY EXTRACT(WEEK FROM log_date)
     `;
 
     db.query(sql, (err, result) => {
@@ -45,10 +45,10 @@ const getMonthlyAverage = (req, res) => {
 
     const sql = `
         SELECT
-            MONTH(log_date) AS month,
+            EXTRACT(MONTH FROM log_date) AS month,
             AVG(total_usage) AS monthly_average
         FROM water_logs
-        GROUP BY MONTH(log_date)
+        GROUP BY EXTRACT(MONTH FROM log_date)
     `;
 
     db.query(sql, (err, result) => {

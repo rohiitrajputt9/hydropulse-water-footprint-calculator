@@ -20,7 +20,7 @@ const authMiddleware = (req, res, next) => {
 
             token,
 
-            "hydropulse_secret_key"
+            process.env.JWT_SECRET || "hydropulse_secret_key"
         );
 
         req.user = decoded;

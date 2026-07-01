@@ -123,7 +123,7 @@ router.get(
 
             SELECT
 
-                DATE(log_date) AS date,
+                log_date AS date,
 
                 SUM(total_usage) AS totalUsage
 
@@ -131,9 +131,9 @@ router.get(
 
             WHERE user_id = ?
 
-            GROUP BY DATE(log_date)
+            GROUP BY log_date
 
-            ORDER BY DATE(log_date) ASC
+            ORDER BY log_date ASC
 
             LIMIT 7
         `;
@@ -172,7 +172,7 @@ router.get(
 
             SELECT
 
-                DATE_FORMAT(log_date, '%Y-%m') AS month,
+                to_char(log_date, 'YYYY-MM') AS month,
 
                 ROUND(AVG(total_usage), 2) AS averageUsage,
 
@@ -182,9 +182,9 @@ router.get(
 
             WHERE user_id = ?
 
-            GROUP BY DATE_FORMAT(log_date, '%Y-%m')
+            GROUP BY to_char(log_date, 'YYYY-MM')
 
-            ORDER BY DATE_FORMAT(log_date, '%Y-%m') ASC
+            ORDER BY to_char(log_date, 'YYYY-MM') ASC
         `;
 
         db.query(sql, [userId], (err, result) => {
